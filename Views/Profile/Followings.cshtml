@@ -1,0 +1,101 @@
+﻿@model Twitter.Models.ProfileFollowingsModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Followings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Profile{
+    <link rel="stylesheet" href="@Url.Content("~/css/profile.css")" type="text/css" />
+}
+
+<div class="profil-container">
+    <div class="profil-header">
+        <div class="profil-bio">
+            <img src="http://www.croop.cl/UI/twitter/images/up.jpg" alt="background" class="bg">
+            <div class="profil-desc">
+                <p>Carl Fredricksen is the protagonist in Up. He also appeared in Dug's Special Mission as a minor character.</p>
+            </div>
+        </div>
+
+        <div class="avatarcontainer">
+            <img src="http://www.croop.cl/UI/twitter/images/carl.jpg" alt="avatar" class="profil-avatar">
+            <div class="profil-hover">
+                <div class="icon-twitter"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="profile-username">
+        @Model.user.id
+    </div>
+    <div class="profil-content">
+        <div class="profil-data">
+            <ul>
+                <li>
+                    @Model.user.tweets.Count
+                    <span>Tweets</span>
+                </li>
+                <li>
+                    <a href="/Profile/@Model.user.id/Followers">
+                        @Model.user.followeds.Count
+                        <span>Followers</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/Profile/@Model.user.id/Followings">
+                        @Model.user.followings.Count
+                        <span>Following</span>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+@foreach (var item in Model.followings)
+{
+    <div class="User-Item">
+        <div class="User-Foto"><img src="~/avatar.png" alt="Avatar" class="avatar"></div>
+        <div class="User-Detail">
+            <div class="Adi">@item.followingUser.id</div>
+            <div class="TwitterId">@item.followingUser.name</div>
+            <div class="TweetTarihi">@item.followingUser.surname</div>
+        </div>
+        <div class="follow-button">
+            @if (item.isFollowing)
+            {
+                <form asp-controller="Profile" asp-action="Unfollow">
+                    <input type="hidden" name="followedUserId" value="@item.followingUser.id"></input>
+                    <input type="hidden" name="currentUserId" value="@Model.currentUser.id"></input>
+                    <div class="follow-box">
+                        <button type="submit" class="profil-follow">
+                            Takibi Bırak
+                        </button>
+                    </div>
+
+                </form>
+            }
+            else
+            {
+                <form asp-controller="Profile" asp-action="Follow">
+                    <input type="hidden" name="followedUserId" value="@item.followingUser.id"></input>
+                    <input type="hidden" name="currentUserId" value="@Model.currentUser.id"></input>
+                    <div class="follow-box">
+                        <button type="submit" class="profil-follow">
+                            Takip Et
+                        </button>
+                    </div>
+                </form>
+            }
+
+
+        </div>
+    </div>
+}
+

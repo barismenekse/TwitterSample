@@ -1,0 +1,47 @@
+﻿@model Twitter.Models.LoginViewModel
+@{
+    Layout = null;
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="@Url.Content("~/css/login.css")" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+
+            <!-- Tabs Titles -->
+            <a href="~/Security/Login"><h2 class="active"> Sign In </h2></a>
+            <a href="~/Security/Register"><h2 class="inactive underlineHover">Sign Up </h2></a>
+
+            <div class="fadeIn first">
+                <i class='fa fa-twitter' style='font-size:64px;color:deepskyblue'></i>
+            </div>
+            <!-- Icon -->
+            <!-- Login Form -->
+            <form asp-controller="Security" asp-action="Login">
+                <input asp-for="userId" type="text" class="fadeIn second" id="id" placeholder="Id" />
+                <input asp-for="password" type="password" class="fadeIn third" id="id" placeholder="Password" />
+                <input type="submit" class="fadeIn fourth" value="Log In">
+            </form>
+
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+

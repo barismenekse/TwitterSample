@@ -1,0 +1,318 @@
+body {
+    background-color: white;
+}
+
+.Menu ul {
+    padding: 0px;
+    list-style-type: none;
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+}
+
+.Menu li {
+    margin-top: 5px;
+    
+}
+
+.Hashtags {
+    border-style: double;
+    border-color: #928084c2;
+    margin-top: 10px;
+}
+
+.wrapper {
+    width: 100%;
+    border-style: double;
+    border-color: #928084c2;
+    display: flex;
+    justify-content: center;
+   
+}
+
+button {
+    border: none;
+    background-color: white;
+}
+
+.Menu {
+    border-style: double;
+    border-color: #928084c2;
+    /* display: block; */
+    /* float: left; */
+    width: 18%;
+    padding: 5px;
+    margin: 1% 1% 1% 0;
+    overflow: hidden;
+}
+
+.menu-icon {
+    display: inline-block;
+    width: 40px;
+}
+
+.container {
+    border-style: double;
+    border-color: #928084c2;
+    display: block;
+    /* float: left; */
+    width: 58%;
+    padding: 1%;
+    margin: 1% 1% 1% 0;
+    text-align: left;
+}
+
+.Tweet {
+    border-style: double;
+    border-color: #928084c2;
+    display: flex;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.Foto {
+    display: inline-block;
+    width: 18%;
+    text-align: center;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.Box {
+    display: inline-block;
+    width: 80%;
+}
+
+.Search {
+    display: block;
+    width: 100%;
+    border-style: solid;
+    border-color: green;
+    display: inline-block;
+}
+
+.SearchButton {
+    width: 10%;
+    display: block;
+    float: left;
+}
+
+.SearchText {
+    width: 75%;
+    display: block;
+    float: right;
+    overflow: hidden;
+}
+
+.Right {
+    border-style: double;
+    border-color: #928084c2;
+    /* display: block; */
+    text-align: left;
+    /* float: right; */
+    width: 15%;
+    padding: 1%;
+    margin: 1% 1% 1% 0;
+}
+
+.Buttons {
+    width: 100%;
+    display: inline-block;
+}
+
+.TweetButton,
+.ReTweetButton,
+.BegenButton {
+    width: 30%;
+    float: left;
+    display: block;
+}
+
+
+/* search form */
+#wrap {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+#nav-search {
+    margin: 0 auto;
+    position: relative;
+    width: 100%
+}
+
+
+    #nav-search input {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 13px;
+        line-height: 20px;
+        display: block;
+        width: 99%;
+        cursor: pointer;
+        color: rgb(102, 102, 102);
+        background-color: rgb(204, 204, 204);
+        border: none;
+        border-radius: 13px 13px 13px 13px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+    }
+
+    #nav-search .icon {
+        position: absolute;
+        display: block;
+        top: 4px;
+        right: 4px;
+        width: 14px;
+        height: 15px;
+        background: url("https://abs.twimg.com/a/1374049044/t1/img/twitter_web_sprite_icons.png") -20px -710px no-repeat transparent;
+        border: none;
+        text-indent: -200px;
+        padding: 0;
+        cursor: pointer;
+    }
+
+
+
+.contentContainer {
+    border-style: double;
+    border-color: #928084c2;
+    display: inline-block;
+    width: 100%;
+    background-color: #E9EAED;
+    font-family: 'Roboto', sans-serif;
+}
+
+.twitter.boxContainer {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+
+.messageBox {
+    width: 93%;
+    padding: 5px;
+    resize: none;
+    height: 60px;
+    color: #292F33;
+    font-size: 13px;
+    font-weight: 200;
+    margin: 10px auto;
+    border-radius: 3px;
+    border: 1px solid #a3d4f2;
+}
+
+    .messageBox:focus {
+        outline: none;
+    }
+
+
+.wordCounter {
+    background-color: transparent;
+    color: #8899a6;
+    float: right;
+    border: 0;
+    padding: 0 15px;
+    vertical-align: top;
+    top: 10px;
+    text-align: right;
+    font-size: 14px;
+    text-shadow: 0 1px 1px rgba(255,255,255,.75);
+}
+
+.postButton {
+    width: 80px;
+    height: 35px;
+    border: none;
+    float: right;
+    color: #FFFFFF;
+    display: block;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 3px;
+    margin: 0 10px 0 0;
+    background-color: #1b95e0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    padding-left: 20px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASgAAAEiCAMAAAB9Qr9NAAAAM1BMVEX////////////////////////////////////////////////////////////////////lEOhHAAAAEHRSTlMAECAwQFBgcICQoLDA0ODwVOCoyAAABQRJREFUeAHs2EFuwkAMhlEnTScIyIzvf9p2QyEQK+r+vSN88sL6AwAAAAAAAAAAAAAA+BfmdVuC80qZeQnOK/3agtLUbvknKCzXkS+CI/Pacy/4tNzy3Ra8mdaen9ZgZ76OPDCm4MVyz2MteGo9Cz14mC49Sy14ZBpZu0dFpp0lajIVByVTbY6aTE/XoI085deM757nTHZfP+zdzZKkKBiFYUBURH7O/V/t9KInYqajtE+hVmac/N51Vy+eKkgkFQuYmncfnc8gsrVm6uCq7ieKL8udFhvYovuJ8KqyOynsoCtODYp3Wjv4ghgU7zRVnNbKr7b0u8VJQfFOPuGwvs2Te1Hv5hTbm24RvJeT33DS7j4LKo+uCZI2FO+04bzto6Dy6Icd0ISheKeV/GEBqCtOvoBpD5JQvFPsIMtBFopwSuDryctDZX7Y8VSCUJkfdm9I9XKnBKbXU73Yye8YLIlCZX6RyRUEoGinuWO03QlAsU4rxosCUKxTxnjFCUBxTr7iQkEAinOaGi6U3PtA5XRT65dOHReq/o2gonuwBVfqk9OHet5JCCrjSntw+lAXnXpJ0VEJQA1e3bWS5uCIBKAGl0+9bGt0RCJQA06tpCV6RyQDNeDUU3BEWlADTpic04finQzq8uVdXz8Vyvfr++L6UIPbKjnoQ/FOBJU+FOFEUOlDEU5E2etD8U7EtK4PVXC1vnwCVMYNVX2ojDtq8lAJt7SpQy24pe7FoeabnCanDTX1B5wEofw9Ttk7bShfcb2WgvwlzI6L1bx8wkXxhiuVFPX3oy4uDFpeJ0ekATVhqLLN3hHJQPn+wB+SIlT9ntFOzEiSUJkmymkljFShFpCtjkgXaurPOk0iUL6BzI857SJQ+7O3QftWNKDWh5/U2KEBNYEPy8jvQQPKt2e3UCaIQO3PfhPluwjUim/XvkNVoAE1dQzUt+C4EkSgKgarK2M1QwQq4UJ1i+680EWgIq5WTg8dq9CA8g231A6sMkSgNtxUOtiSEIGKGI9Yr09dBOr6wDt18BUiUBvw5A0ZO0SgIvDkDRkrRKDuG3jzwaWwCNT26ETumwpUfHZlUKACVR89nSRBBSo96hShAhU6bqke/O8yUPtNTv5gWKtAzY86bVCBumkJ1cPBpbAMVHryzt+py0CFs3cjlHrNyVdIQB3M5D0v038k45y2UkecXIYMVKS/fvIxrimVUjr9jfEKHahKXYR8gRaXlFIuv+pHThN0oBb8vx7dbfmmA+X7g0+tJOhAJerHDCp0an4yqEw9+GtQgTuix6B26rlfg4rcc78GVaiZ3KAi9xZcgyrU5ZpB/TlDOYMan6EMiv7IMyjuD8qgIvf4j0EV6oVLBhW5f25QO7VtYFCB+27AoDK1NjCoAGoqN6hEbdgZlO/UVG5QCzeVG1SjTi8wqMhN5Qa1M3fQO4MK3OG0BrVxh9MaVKcWUQa1cOdnG1ShjoAyqMCdbGRQGzfyDKpRI8+gZm7kGVSmRp5BefzRalDUIqoF91UGtVOHiRlU4F6UZFArd4qfQVX8WwnuMIMK+F2J7iSDWrlTDg1qp173alAeAP7+UWdQC/dCToPKZXJEBhXccPZg4z/t0CEBAAAAw6D+rR/iZgIiIEqUKFEvUaJEiRIlSpQoUaJEiRIlqk+UKFGiRIkSJUqUKFGiRIkSJUqUKFGiRIkSJUqUKFGiAAAAAAAAAAAAAAAAoGFgJ6MP+LhP2QAAAABJRU5ErkJggg==);
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: 5px 6px;
+    border: 1px solid transparent;
+    margin-bottom: 5px;
+}
+
+    .postButton:hover, .postButton:visited {
+        outline: none;
+    }
+
+    .postButton:visited {
+        outline: none;
+        box-shadow: 0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15);
+    }
+
+    .postButton:active {
+        background-color: #3B5998;
+        border-color: #2f477a #314a7f #334c83;
+        box-shadow: 0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15);
+    }
+
+/*   */
+.close {
+    cursor: pointer;
+    float: right;
+    margin: 12px;
+    width: 10px;
+    height: 10px;
+    opacity: 0.6;
+}
+
+    .close:hover {
+        opacity: 1;
+    }
+
+    .close:before, .close:after {
+        position: absolute;
+        content: ' ';
+        height: 13px;
+        width: 2px;
+        background-color: #333;
+    }
+
+    .close:before {
+        transform: rotate(45deg);
+    }
+
+    .close:after {
+        transform: rotate(-45deg);
+    }
+
+.right-level {
+    display: block;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-text {
+        display: none;
+    }
+    .Right{
+        display:none;
+    }
+    .container {
+        width: 80%;
+    }
+    .Menu {
+        width: auto;
+    }
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}

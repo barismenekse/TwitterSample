@@ -1,0 +1,171 @@
+﻿@model Twitter.Models.ProfileViewModel;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Profile{
+    <link rel="stylesheet" href="@Url.Content("~/css/profile.css")" type="text/css" />
+}
+<div class="profil-container">
+    <div class="profil-header">
+        <div class="profil-bio">
+            <img src="http://www.croop.cl/UI/twitter/images/up.jpg" alt="background" class="bg">
+            <div class="profil-desc">
+                <p>Carl Fredricksen is the protagonist in Up. He also appeared in Dug's Special Mission as a minor character.</p>
+            </div>
+        </div>
+
+        <div class="avatarcontainer">
+            <img src="http://www.croop.cl/UI/twitter/images/carl.jpg" alt="avatar" class="profil-avatar">
+            <div class="profil-hover">
+                <div class="icon-twitter"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="profile-username">
+        @Model.user.id
+    </div>
+    <div class="profil-content">
+        <div class="profil-data">
+            <ul>
+                <li>
+                    @Model.user.tweets.Count
+                    <span>Tweets</span>
+                </li>
+                <li>
+                    <a href="/Profile/@Model.user.id/Followers">
+                        @Model.user.followeds.Count
+                        <span>Followers</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="/Profile/@Model.user.id/Followings">
+                        @Model.user.followings.Count
+                        <span>Following</span>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+
+        @if (@Model.currentUser.id != @Model.user.id)
+        {
+            @if (@Model.isFollow)
+            {
+                <form asp-controller="Profile" asp-action="Unfollow">
+                    <input type="hidden" name="followedUserId" value="@Model.user.id"></input>
+                    <input type="hidden" name="currentUserId" value="@Model.currentUser.id"></input>
+                    <div class="follow-box">
+                        <button type="submit" class="profil-follow">
+                            Takibi Bırak
+                        </button>
+                    </div>
+
+                </form>
+            }
+            else
+            {
+                <form asp-controller="Profile" asp-action="Follow">
+                    <input type="hidden" name="followedUserId" value="@Model.user.id"></input>
+                    <input type="hidden" name="currentUserId" value="@Model.currentUser.id"></input>
+                    <div class="follow-box">
+                        <button type="submit" class="profil-follow">
+                            Takip Et
+                        </button>
+                    </div>
+                </form>
+
+
+            }
+
+        }
+
+    </div>
+
+</div>
+
+
+
+    @foreach (var item in Model.tweets)
+    {
+
+        <div class="Tweet">
+            <div class="Foto"><img src="~/avatar.png" alt="Avatar" class="avatar"></div>
+            <div class="Box">
+                <div class="Gonderen">
+                    @if (item.isRetweet)
+                    {
+                        <p>@item.userRetweet.id adlı kullanıcı retweetledi</p>
+                    }
+                    <div class="Adi">@item.tweet.sender.name</div>
+                    <a href="/Profile/@item.tweet.sender.id"><div class="TwitterId">@item.tweet.sender.id</div> </a>
+                    <div class="TweetTarihi">@item.tweet.date</div>
+                </div>
+                <div class="TweetIcerik">
+                    @item.tweet.content
+                </div>
+                <div class="TweetImage"></div>
+                <div class="Buttons">
+                    <div class="TweetButton">
+                        <a href="#"><i class='fa fa-comment' style='font-size:24px'></i></a>
+                    </div>
+                    <div class="ReTweetButton">
+                        <form asp-controller="Home" asp-action="Retweet">
+                            <input asp-for="tweet.id" type="hidden" value="@item.tweet.id" />
+                            <!-- <input asp-for="like.userId" type="hidden" value="barismenekse" />-->
+                            @if (@item.currentUserDidRetweet)
+                            {
+                                <button type="submit">
+                                    <i class='fa fa-retweet' style="font-size:24px;color:red;"></i>
+                                </button>
+                            }
+                            else
+                            {
+                                <button type="submit">
+                                    <i class='fa fa-retweet' style="font-size:24px;"></i>
+                                </button>
+                            }
+                            @item.tweet.retweets.Count
+                        </form>
+                    </div>
+
+                    <div class="BegenButton">
+                        <form asp-controller="Home" asp-action="Like">
+                            <input asp-for="like.tweetId" type="hidden" value="@item.tweet.id" />
+                            <!-- <input asp-for="like.userId" type="hidden" value="barismenekse" />-->
+                            @if (@item.isLike)
+                            {
+                                <button type="submit">
+                                    <i class='fa fa-heart' style="font-size:24px;color:red;"></i>
+                                </button>
+                            }
+                            else
+                            {
+                                <button type="submit">
+                                    <i class='fa fa-heart' style="font-size:24px;"></i>
+                                </button>
+                            }
+
+                            @item.tweet.likes.Count
+                        </form>
+                    </div>
+                    @if (@Model.currentUser.id == @item.tweet.sender.id)
+                    {
+                <div class="DeleteButton">
+                    <form asp-controller="Home" asp-action="DeleteTweet">
+                        <input asp-for="tweet.id" type="hidden" value="@item.tweet.id" />
+                        <button type="submit">
+                            <i class='fa fa-trash' style="font-size:24px;"></i>
+                        </button>
+                    </form>
+                </div>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    }

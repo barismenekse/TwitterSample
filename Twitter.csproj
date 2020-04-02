@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200105100510_FirstMigration.cs" />
+    <Compile Remove="Migrations\20200105100510_FirstMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200105102017_v2.cs" />
+    <Compile Remove="Migrations\20200105102017_v2.Designer.cs" />
+    <Compile Remove="Migrations\20200105104127_v3.cs" />
+    <Compile Remove="Migrations\20200105104127_v3.Designer.cs" />
+    <Compile Remove="Migrations\20200105141741_v4.cs" />
+    <Compile Remove="Migrations\20200105141741_v4.Designer.cs" />
+    <Compile Remove="Migrations\20200105145004_v4.cs" />
+    <Compile Remove="Migrations\20200105145004_v4.Designer.cs" />
+    <Compile Remove="Migrations\20200105145714_add-migration v4.cs" />
+    <Compile Remove="Migrations\20200105145714_add-migration v4.Designer.cs" />
+    <Compile Remove="Migrations\20200105145828_v4.cs" />
+    <Compile Remove="Migrations\20200105145828_v4.Designer.cs" />
+    <Compile Remove="Migrations\20200105150333_v4.cs" />
+    <Compile Remove="Migrations\20200105150333_v4.Designer.cs" />
+    <Compile Remove="Migrations\20200105150535_v2.cs" />
+    <Compile Remove="Migrations\20200105150535_v2.Designer.cs" />
+    <Compile Remove="Migrations\20200105150828_add-migration v1.cs" />
+    <Compile Remove="Migrations\20200105150828_add-migration v1.Designer.cs" />
+    <Compile Remove="Migrations\20200105204620_v1.cs" />
+    <Compile Remove="Migrations\20200105204620_v1.Designer.cs" />
+    <Compile Remove="Migrations\20200105205008_v1.cs" />
+    <Compile Remove="Migrations\20200105205008_v1.Designer.cs" />
+    <Compile Remove="Migrations\20200106061800_v1.cs" />
+    <Compile Remove="Migrations\20200106061800_v1.Designer.cs" />
+    <Compile Remove="Migrations\20200106061922_add-migration v1.cs" />
+    <Compile Remove="Migrations\20200106061922_add-migration v1.Designer.cs" />
+    <Compile Remove="Migrations\20200106062018_v1.cs" />
+    <Compile Remove="Migrations\20200106062018_v1.Designer.cs" />
+    <Compile Remove="Migrations\20200106062101_v1.cs" />
+    <Compile Remove="Migrations\20200106062101_v1.Designer.cs" />
+    <Compile Remove="Migrations\20200106073133_v2.cs" />
+    <Compile Remove="Migrations\20200106073133_v2.Designer.cs" />
+    <Compile Remove="Migrations\20200106073546_v1.cs" />
+    <Compile Remove="Migrations\20200106073546_v1.Designer.cs" />
+    <Compile Remove="Migrations\20200106074932_v2.cs" />
+    <Compile Remove="Migrations\20200106074932_v2.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\twitter.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" />
+  </ItemGroup>
+
+
+
+</Project>
